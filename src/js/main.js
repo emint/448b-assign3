@@ -91,8 +91,9 @@ function DrawIndividualGraph(currentSite) {
     var individualEdgeArray = [];
     if (nodeToEdgeArray[currentSite.unique_id] == null) return;
     for(var i = 0; i < nodeToEdgeArray[currentSite.unique_id].length; i++) {
-        var target = edgeArray[nodeToEdgeArray[currentSite.unique_id][i]].target;
-        neighbors.push(target);
+        var targetIndex = 
+            edgeArray[nodeToEdgeArray[currentSite.unique_id][i]].target.index;
+        neighbors.push(peopledata[targetIndex]);
         individualEdgeArray.push({source: 0, target: i + 1});
     }
 
