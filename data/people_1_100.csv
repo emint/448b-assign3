@@ -1,100 +1,100 @@
-Primary_Name,Secondary_Name,Fathers_Name,Birthplace,Birthplace_Code,Autopopulated birthplace,Certainty_of_Birthplace,Work/Living_Place,WL_Place_code_#1,Work/Living_Place_#2,WL_Place_code_#2,Work/Living_Place_#3,WL_Place_code_#3,Work/Living_Place_#4,WL_Place_code_#4,Work/Living_Place_#5,WL_Place_code_#5,Work/Living_Place_#6,WL_Place_code_#6,Work/Living_Place_#7,WL_Place_code_#7,Work/Living_Place_#8,WL_Place_code_#8,Work/Living_Place_#9,WL_Place_code_#9,Work/Living_Place_#10,WL_Place_code_#10,Work/Living_Place_#11,WL_Place_code_#11,Work/Living_Place_#12,WL_Place_code_#12,Work/Living_Place_#13,WL_Place_code_#13,Work/Living_Place_#14,WL_Place_code_#14,Work/Living_Place_#15,WL_Place_code_#15,Work/Living_Place_#16,WL_Place_code_#16,Work/Living_Place_#17,WL_Place_code_#17,Work/Living_Place_#18,WL_Place_code_#18,Work/Living_Place_#19,WL_Place_code_#19,Endeavor,Endeavor_Code_1,Endeavor_2,Endeavor_Code_2,Endeavor_3,Endeavor_Code_3,Endeavor_4,Endeavor_Code_4,Endeavor_5,Endeavor_Code_5,Endeavor_6,Endeavor_Code_7,Endeavour_8,Endeavour_Code_8,Endeavour_9,Endeavour_Code_10,Era,Century,Fame,Page,Checked,Pauly Consulted
-Accius,Lucius,NA,Umbria,0,2335,1,Rome,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Stage Poet,113,Literary Scholar,111,,,,,,,,,,,,,16,,1.1,3,x,
-Achaeus (two),,NA,Eretria,370,370,1,Athens,361,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Tragic Poet,105,,,,,,,,,,,,,,,3,,0.3,5,x,
-Achaeus (three),,NA,NA,0,<Null>,3,Anatolia,2019,Sardis,2279,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Viceroy for Antiochus III,401,,,,,,,,,,,,,,,13,,0.2,6,x,
-Achilles,Tatius (one),NA,Alexandria,0,2014,1,Alexandria,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Novelist,106,,,,,,,,,,,,,,,29,,1,7,x,
-Achilles,Tatius (two),NA,NA,0,<Null>,3,NA,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Writer,107,,,,,,,,,,,,,,,0,3,0.1,7,x,
-Acilius,Gaius,NA,NA,0,<Null>,3,Rome,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,senator ,402,historian,108,,,,,,,,,,,,,16,,0.2,7,x,
-Acilius Attianus,Publius,NA,Italica,2163,2163,3,Rome,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,praetorian prefect,408,senator,402,,,,,,,,,,,,,26,,,8,x,
-Acilius Glabrio (1),Manius,Manius (two),NA,0,<Null>,1,Rome,0,Etruria,2129,Thermopylae,0,Naupactus,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,tribune,425,praetor,420,consul,407,,,,,senator ,402,,,,,14,,0.1,8,x,
-Acilius Glabrio (4),Manius,NA,NA,0,<Null>,3,Rome,0,Alba,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,consul,407,revolutionary,504,,,,,,,senator ,402,,,,,26,,0.2,8,x,
-Acilius Glabrio (2),Manius,NA,NA,0,<Null>,1,Rome,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Tribune,425,,,,,,,,,senator ,402,,,,,18,,0.2,8,x,
-Acilius Glabrio (3),Manius,NA,NA,0,<Null>,1,Rome,0,Bithynia,2057,Pontus,2264,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Tribune,425,praetor,420,consul,407,pontifex,403,,,senator ,402,,,,,20,,0.4,8,x,x
-Acusilaus,,NA,Argos,0,115,2,Argos,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,literary scholar,104,,,,,,,,,,,,,,,NA,-6,,11,x,
-Ada,,Hecatomnus,Caria,0,2076,2,Caria,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,satrap ,403,queen,603,,,,,,,,,,,,,9,,,11,x,
-Adrastus (2),,NA,Aphrodisias,1005,1005,1,Aphrodisias,1005,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Peripatetic philosopher,102,teacher,110,,,,,,,,,,,,,,2,0.2,14,x,
-Adrianus,,NA,Tyre,694,2333,1,Tyre,694,Rome,0,Ephesus,0,Athens,0,Rome,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,sophist,109,,,,,,,,,,,,,,,30,,0.1,14,x,x
-Aedesisus,,NA,Cappadocia,0,2072,1,Pergamum,828,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,neoplatonist,102,teacher,110,,,,,,,,,,,,,32,,0.2,15,x,
-Aelian,Claudius Aelianus,NA,Praeneste,0,2265,2,Caesaria,0,Rome,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,stoic,102,,,,,,,,,,,,,,,31,,,18,x,x
-Aelianus,,NA,NA,0,<Null>,3,NA,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,military writer,107,,,,,,,,,,,,,,,,2,0.1,18,x,
-Aelius,Lucius,NA,Rome,0,2271,1,Rome,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,literary scholar,104,stoic,102,,,,,,,,,,,,,16,,0.2,18,x,
-Aelius Antipater,,NA,Hieropolis,0,#N/A,1,Rome,0,Bithynia,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,sophist,109,secretary,422,teacher,110,senator,402,governor,403,historian,108,,,,,30,,,18,x,
-Aelius Lucius,,NA,Lanuvium,0,2173,3,Rome,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,literary scholar,104,grammarian,114,stoic,102,Equestrian,0,,,,,,,,,18,,,18,x,
-Aelius Caesar,Lucius,NA,NA,0,<Null>,3,Rome,0,Pannonia,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,consul,407,consul ,407,governor,406,,,,,,,,,,,28,,,18,x,
-Aelius Gallus,,NA,NA,0,<Null>,3,Rome,0,Egypt,0,Arabia Fellix,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,prefect,408,governor,406,doctor,304,writer,304,,,,,,,,,22,,,18,x,
-Aelius Marcianus,,NA,eastern empire,0,2122,2,NA,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,lawyer,409,writer,107,,,,,,,,,,,,,31,,,19,x,
-Aelius Melissus,,NA,NA,0,<Null>,3,NA,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,grammarian,114,,,,,,,,,,,,,,,28,,,19,x,
-Aelius Paetus,Sextus,NA,NA,0,<Null>,3,Rome,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,lawyer,409,writer,107,consul,407,,,,,,,,,,,15,,,19,x,
-Aelius Promotus,,NA,Alexandria,0,2014,2,Alexandria,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,doctor,304,writer,107,,,,,,,,,,,,,,2,,19,x,
-Aelius Seianus,Lucius,L. Seius Strabo,Volsinii,0,2344,3,Rome,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,prefect,408,consul,407,conspirator,504,,,,,,,,,,,23,,,19,x,
-Aelius Tubero,Lucius,NA,NA,0,<Null>,3,Rome,0,Pharsalus,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,praetor,420,historian,108,academic philosopher,102,,,,,,,,,,,21,,,19,x,
-Aelius Tubero,Quintus,Lucius Aelius Tubero,NA,0,<Null>,3,Rome,0,Pharsalus,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,lawyer,409,writer,107,historian,108,,,,,,,,,,,22,,,19,x,
-Aemilius Aemilianus,Marcus,NA,NA,0,<Null>,3,Moesia,0,Italy,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,governor,406,emperor,601,,,,,,,,,,,,,33,,0.3,19,x,
-Aemilius Asper,,NA,NA,0,<Null>,3,NA,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,literary scholar,104,grammarian,114,,,,,,,,,,,,,,2,,20,x,
-Aemilius Laetus,Quintus,,Thaenae,0,2312,3,Rome,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,praetorian prefect,408,conspirator,504,,,,,,,,,,,,,30,,,20,x,
-Aemilius Lepidus,Manius,grandson of (three),NA,0,<Null>,3,Rome,0,Asia,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,proconsul,410,consul ,407,,,,,,,,,,,,,23,,0.1,20,x,
-Aemilius Lepidus (1),Marcus,NA,NA,0,<Null>,3,Rome,0,Abydos,765,Sicily,0,Liguria,0,Mutina,0,Parma,0,Liguria,0,Gaul,0,,,,,,,,,,,,,,,,,,,,,,,Praetor,420,consul,407,colony founder,406,pontifex maximus,403,censor,404,ambassador,426,consul,407,agronomer,308,15,,0.3,20,x,
-Aemilius Lepidus (2),Marcus,descendant of (one),NA,0,<Null>,3,Rome,0,Gaul,0,Rome,0,Sardinia,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Consul,407,proconsul,410,,,,,,,,,,,,,19,,0.3,20,x,
-Aemilius Lepidus (3),Marcus,son of (two),NA,0,<Null>,3,Rome,0,Spain,0,Gaul,0, Rome,0,Africa,0,Sicily,0,Circeii,0,,,,,,,,,,,,,,,,,,,,,,,,,Consul,407,magister equitum,422,governor,406,pontifex maximus,403,consul,407,,,,,,,21,,0.6,20,x,
-Aemilius Lepidus (4),Marcus,son of (three),NA,0,<Null>,3,Rome,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,conspirator,504,,,,,,,,,,,,,,,21,,0.1,20,x,
-Aemilius Lepidus (5),Marcus,Paullus Aemilius Lepidus,NA,0,<Null>,3,Rome,0,Pannonia,0,Dalmatia,0,Tarraconensis,0,Asia,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,consul,407,commander ,417,governor,406,proconsul,424,,,,,,,,,22,,,21,x,
-Aemilius Lepidus (6),Marcus,Aemilius Lepidus (6),NA,0,<Null>,3,Rome,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,conspirator,504,,,,,,,,,,,,,,,24,,,21,x,
-Aemlius Lepidus,Paullus,L. Aemlius Paullus,NA,0,<Null>,3,Rome,0,Sicily,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,suffect consul,407,proconsul,410,censor,404,augur,309,frater arvalis,0,,,,,,,21,,,21,x,
-Aemilius Macer,,NA,Verona,0,2341,3,Verona,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,poet,113,,,,,,,,,,,,,,,22,,0.1,21,x,
-Aemilius Papinianus,,NA,Africa,0,#N/A,3,Africa,0,Rome,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,lawyer,409,prefect,408,writer,107,,,,,,,,,,,31,,0.5,21,x,
-Aemilius Paullus (1),Lucius,NA,NA,0,<Null>,3,Rome,0,Illyria,0,Cannae,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,consul,407,general,412,,,,,,,,,,,,,14,,0.2,21,x,
-Aemilius Paullus (2),Lucius,NA,NA,0,<Null>,3,Rome,0,Further Spain,0,Asia,0,Liguria,0,Pydna,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,augur,309,governor,406,general,412,commissioner to Maced.,406,consul,407,consul,407,censor,404,,,16,,,21,x,
-Aemilius Paullus (3),Lucius,son of (two),NA,0,<Null>,3,Rome,0,Macedonia,0,Mutina,0,Miletus,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,quaestor,418,curule aedile,421,praetor,420,consul,407,,,,,,,,,20,,0.2,22,x,
-Aemilius Paullus (4),Lucius,Paullus Aemilius Lepidus,NA,0,<Null>,3,Rome,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,consul,406,conspirator,504,,,,,,,,,,,,,23,,,22,x,
-Aemilius Regillus,Lucius,NA,NA,0,<Null>,3,Rome,0,Myonnesus,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,praetor,420,admiral,419,,,,,,,,,,,,,15,,,22,x,
-Aemilius Scaurus,Mamercus,NA,NA,0,<Null>,3,Rome,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,orator,411,advocate,409,suffect consul,407,,,,,,,,,,,23,,0.1,22,x,
-Aemilius Scaurus (1),Marcus,NA,NA,0,<Null>,3,Rome,0,Liguria,0,Asia,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,consul,407,censor,404,senator,402,ambassador,426,,,,,,,,,18,,0.6,22,x,
-Aemilius Scaurus (2),Marcus,son of (one),NA,0,<Null>,3,Rome,0,Judaea,0,Nabataea,0,Sardinia,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,quaestor,418,aedile,421,praetor,420,governor,406,,,,,,,,,20,,0.3,22,x,
-Aeneas (Aineias) Tacticus,,NA,Stymphalos,296,296,1,Arcadia,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,military writer,107,general,412,,,,,,,,,,,,,8,,0.2,23,x,
-Aenesidemus,,NA,Cnossus,967,967,1,Alexandria,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,sceptical philosopher,102,teacher,110,,,,,,,,,,,,,,-1,0.2,23,x,
-Aeschines,,NA,Athens,361,361,1,Athens,361,Megalopolis,0,Macedonia,0,Rhodes,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,orator,411,ambassador,426,teacher of oratory,110,,,,,,,,,,,9,,2.1,25,x,
-Aeschines Socraticus,,NA,Sphettus_(Attica),0,#N/A,3,Athens,361,Syracuse,0,Athens,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,writer,107,socratic philosopher,102,,,,,,,,,,,,,8,,0.3,26,x,
-Aeschylus,,NA,Eleusis,362,362,1,Athens,361,Syracuse,0,Athens,0,Gela,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,dramatist,206,tragic poet,105,,,,,,,,,,,,,4,,4.4,26,x,
-Aesopus,,NA,NA,0,<Null>,3,Rome,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,actor,207,,,,,,,,,,,,,,,20,,0.2,29,x,
-Aёtius (1),,NA,NA,0,<Null>,3,NA,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,writer,107,philosopher,102,,,,,,,,,,,,,,1,0.2,30,x,
-Aёtius (2),,NA,Amida,0,#N/A,3,Alexandria,0,Constantinople,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,physician ,307,writer,107,,,,,,,,,,,,,44,,0.2,30,x,
-Aetius,Flavius,Gaudentius,Durostorum,0,2121,3,Rome,0,Gaul,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,General,412,patrician,604,consul,407,consul,407,consul,407,governor (patrikios),406,,,,,40,,0.3,31,x,
-Afranius (1),Lucius,NA,NA,0,<Null>,3,Rome,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,comic poet,118,,,,,,,,,,,,,,,,-2,0.2,33,x,
-Afranius (2),Lucius,NA,Picenum,0,2259,3,Rome,0,Gaul,0,Asia,0,Hither Spain,0,Ilerda,0,Pharsalus,0,Thapsus,0,,,,,,,,,,,,,,,,,,,,,,,,,legate,413,praetor,420,proconsul,410,consul,407,governor,406,,,,,,,20,,0.3,33,x,
-Afranius Burrus,Sextus,NA,Narbonensis,0,2217,1,Rome,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,procurator,424,praetorian prefect,408,,,,,,,,,,,,,25,,,33,x,
-Agasias (1),,Dositheus,Ephesus,844,844,1,NA,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,sculptor,201,,,,,,,,,,,,,,,18,,0.1,36,x,
-Agasias (2),,Menophilus,Ephesus,844,844,1,Delos,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,sculptor,201,,,,,,,,,,,,,,,18,,0.1,36,x,
-Agatharchides,,NA,Cnidus,0,2096,3,Alexandria,0,Athen,361,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,historian,108,geographer,308,literary scholar,104,,,,,,,,,,,17,,0.2,36,x,
-Agatharchus,,NA,Samos,864,864,1,Athens,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,painter,202,,,,,,,,,,,,,,,5,,0.3,36,x,
-Agathias,Agathias Scholasticus,NA,Myrina,25,502,1,Alexandria,0,Constantinople,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,lawyer,409,writer,107,historian,108,poet,113,,,,,,,,,44,,0.6,36,x,
-Agathinus,,NA,Sparta,345,345,1,Sparta,345,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,physician ,307,writer,107,,,,,,,,,,,,,,1,0.2,36,x,
-Agathocles (1),,Carcinus,Termae,0,2311,3,Syracuse,47,Croton,0,Tarentum,0,Himera,0,Carthage,0,Bruttium,0,Corcyra,0,,,,,,,,,,,,,,,,,,,,,,,,,general,412,governor,406,tyrant,605,,,,,,,,,,,10,,1.2,37,x,
-Agathocles (2),,,Cyzicus,,2116,3,NA,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,literary scholar,104,grammarian,114,,,,,,,,,,,,,14,,,37,x,
-Agathon,,Tisamenus,Athens,361,361,1,Athens,361,Macedon,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Tragic Poet,105,,,,,,,,,,,,,,,6,,0.6,37,x,
-Agennius Urbicus,,NA,NA,0,<Null>,3,NA,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Writer,107,geographer,308,,,,,,,,,,,,,,5,0.1,39,x,
-Agesilaus II,,Agis II,Sparta,345,345,1,Sparta,345,Asia,0,Corinth,0,Coronea,0,Acarnania,0,Boeotia,0,Asia,0,Egypt,0,,,,,,,,,,,,,,,,,,,,,,,Spartan King,603,general,412,,,,,,,,,,,,,8,,0.9,39,x,
-Agis II,,Archidamus II,Sparta,345,345,1,Sparta,345,Mantinea,0,Decelea,0,Athens,0,Elis,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Spartan King,603,general,412,,,,,,,,,,,,,6,,0.3,40,x,
-Agis III,,NA,Sparta,345,345,1,Sparta,345,Crete,0,Megalopolis,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Spartan King,603,general,412,,,,,,,,,,,,,9,,0.3,40,x,
-Agis IV,,Eudamidas,Sparta,345,345,1,Sparta,345,Aetolia,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Spartan King,603,general,412,revolutionary,504,,,,,,,,,,,13,,0.3,40,x,
-Agoracritus,,NA,Paros,509,509,1,Coronea,0,Athens,0,Rhamnus,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,sculptor,201,,,,,,,,,,,,,,,6,,0.3,43,x,
-Agrippa,,NA,NA,0,,0,NA,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Pyrrhonist sceptic,102,,,,,,,,,,,,,,,,,,47,x,
-Agroecius,,NA,NA,0,,0,NA,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,bishop,701,grammarian,114,,,,,,,,,,,,,41,,,47,x,
-Agyrrhius,,NA,Athens,361,361,1,Athens,361,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,politician,427,orator,411,,,,,,,,,,,,,7,,0.2,47,x,
-Alaric,,NA,Germany,0,,0,Germany,0,Balkans,0,Rome,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,general,412,,,,,,,,,,,,,,,39,,,49,x,
-Albinovanus,Celsus,NA,NA,0,<Null>,3,Rome,0,Armenia,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,poet,113,secretary,422,,,,,,,,,,,,,22,,0.2,50,x,
-Albinovanus Pedo,,,NA,0,,0,Rome,0,Germany,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,commander (praefectus),417,epigrammatist,113,,,,,,,,,,,,,23,,,50,x,
-Albinus (1),,NA,NA,0,<Null>,3,Smyrna,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,platonist philosopher,102,,,,,,,,,,,,,,,29,,0.1,50,x,
-Albinus (2),,,NA,0,,0,Rome,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,"writer on music, geometry, dialectic",102,consul,407,,,,,,,,,,,,,36,,,50,x,
-Albucius,Titus,NA,NA,0,,0,Rome,0,Athens,0,Sardinia,0,Athens,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,epicurean,102,writer,107,governor,406,exile,0,,,,,,,,,18,,,51,x,
-Albucius Silus,Gaius,NA,Novaria,,,3,Rome,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,orator,411,teacher,110,,,,,,,,,,,,,22,,,51,x,
-Alcaeus (1),,,Mytilene,0,,3,Mytilene,0,Egypt,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,lyric poet,101,politician,427,revolutionary,504,,,,,,,,,,,-3,,,51,x,
-Alcaeus (2),,NA,Athens,0,,2,Athens,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,old comic poet,118,,,,,,,,,,,,,,,7,,,51,x,
-Alcaeus (3),,,Messene,0,,3,Messene,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,epigrammatist,113,iambic poet,101,,,,,,,,,,,,,14,,,51,x,
-Alcamenes,,NA,Athens,0,,2,Athens,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,archizing sculptor,201,,,,,,,,,,,,,,,6,,,51,x,
-Alcibiades,,Cleinias,Athens,361,361,3,Athens,0,Argos,0,Sparta,0,Athens,0,Samos,0,Cyzicus,0,Athens,0,Notium,0,Aegespotami,0,Phrygia,0,,,,,,,,,,,,,,,,,,,general,412,politician,427,orator,411,admiral,0,rebel,0,ambassador,426,,,,,6,,0.7,54,x,
-Alcidamas,,NA,Elaea,0,#N/A,1,Athens,361,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,rhetor,119,sophist,109,writer,107,teacher,110,,,,,,,,,,-4,0.2,54,x,
-Alcidas,,NA,Sparta,345,345,1,Sparta,0,Mytilene,0,Corcyra,0,Heraclea,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Commander,417,founder,0,,,,,,,,,,,,,5,,0.2,54,x,
-Alcinous (2),,NA,NA,0,<Null>,3,NA,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Platonist philosopher,102,writer,107,,,,,,,,,,,,,,2,0.3,54,x,
-Alciphron,,NA,NA,0,<Null>,3,NA,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,sophist,109,writer,107,,,,,,,,,,,,,,2,0.1,54,x,
-Alcmaeon (2),,NA,Croton,56,56,1,NA,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,pythagorean philosopher,102,writer,107,,,,,,,,,,,,,,-5,0.2,55,x,
-Alcman,,NA,Laconia,,2171,2,Sparta,345,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Lyric Poet,101,,,,,,,,,,,,,,,,-7,0.8,55,x,
+unique_id,Primary_Name,Secondary_Name,Fathers_Name,Birthplace,Birthplace_Code,Autopopulated birthplace,Certainty_of_Birthplace,Work/Living_Place,WL_Place_code_#1,Work/Living_Place_#2,WL_Place_code_#2,Work/Living_Place_#3,WL_Place_code_#3,Work/Living_Place_#4,WL_Place_code_#4,Work/Living_Place_#5,WL_Place_code_#5,Work/Living_Place_#6,WL_Place_code_#6,Work/Living_Place_#7,WL_Place_code_#7,Work/Living_Place_#8,WL_Place_code_#8,Work/Living_Place_#9,WL_Place_code_#9,Work/Living_Place_#10,WL_Place_code_#10,Work/Living_Place_#11,WL_Place_code_#11,Work/Living_Place_#12,WL_Place_code_#12,Work/Living_Place_#13,WL_Place_code_#13,Work/Living_Place_#14,WL_Place_code_#14,Work/Living_Place_#15,WL_Place_code_#15,Work/Living_Place_#16,WL_Place_code_#16,Work/Living_Place_#17,WL_Place_code_#17,Work/Living_Place_#18,WL_Place_code_#18,Work/Living_Place_#19,WL_Place_code_#19,Endeavor,Endeavor_Code_1,Endeavor_2,Endeavor_Code_2,Endeavor_3,Endeavor_Code_3,Endeavor_4,Endeavor_Code_4,Endeavor_5,Endeavor_Code_5,Endeavor_6,Endeavor_Code_7,Endeavour_8,Endeavour_Code_8,Endeavour_9,Endeavour_Code_10,Era,Century,Fame,Page,Checked,Pauly Consulted,,,,,,,,,,
+Accius_0,Accius,Lucius,NA,Umbria,0,2335,1,Rome,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Stage Poet,113,Literary Scholar,111,,,,,,,,,,,,,16,,1.1,3,x,,,,,,,,,,,
+Achaeus (two)_1,Achaeus (two),,NA,Eretria,370,370,1,Athens,361,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Tragic Poet,105,,,,,,,,,,,,,,,3,,0.3,5,x,,,,,,,,,,,
+Achaeus (three)_2,Achaeus (three),,NA,NA,0,<Null>,3,Anatolia,2019,Sardis,2279,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Viceroy for Antiochus III,401,,,,,,,,,,,,,,,13,,0.2,6,x,,,,,,,,,,,
+Achilles_3,Achilles,Tatius (one),NA,Alexandria,0,2014,1,Alexandria,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Novelist,106,,,,,,,,,,,,,,,29,,1,7,x,,,,,,,,,,,
+Achilles_4,Achilles,Tatius (two),NA,NA,0,<Null>,3,NA,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Writer,107,,,,,,,,,,,,,,,0,3,0.1,7,x,,,,,,,,,,,
+Acilius_5,Acilius,Gaius,NA,NA,0,<Null>,3,Rome,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,senator ,402,historian,108,,,,,,,,,,,,,16,,0.2,7,x,,,,,,,,,,,
+Acilius Attianus_6,Acilius Attianus,Publius,NA,Italica,2163,2163,3,Rome,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,praetorian prefect,408,senator,402,,,,,,,,,,,,,26,,,8,x,,,,,,,,,,,
+Acilius Glabrio (1)_7,Acilius Glabrio (1),Manius,Manius (two),NA,0,<Null>,1,Rome,0,Etruria,2129,Thermopylae,0,Naupactus,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,tribune,425,praetor,420,consul,407,,,,,senator ,402,,,,,14,,0.1,8,x,,,,,,,,,,,
+Acilius Glabrio (4)_8,Acilius Glabrio (4),Manius,NA,NA,0,<Null>,3,Rome,0,Alba,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,consul,407,revolutionary,504,,,,,,,senator ,402,,,,,26,,0.2,8,x,,,,,,,,,,,
+Acilius Glabrio (2)_9,Acilius Glabrio (2),Manius,NA,NA,0,<Null>,1,Rome,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Tribune,425,,,,,,,,,senator ,402,,,,,18,,0.2,8,x,,,,,,,,,,,
+Acilius Glabrio (3)_10,Acilius Glabrio (3),Manius,NA,NA,0,<Null>,1,Rome,0,Bithynia,2057,Pontus,2264,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Tribune,425,praetor,420,consul,407,pontifex,403,,,senator ,402,,,,,20,,0.4,8,x,x,,,,,,,,,,
+Acusilaus_11,Acusilaus,,NA,Argos,0,115,2,Argos,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,literary scholar,104,,,,,,,,,,,,,,,NA,-6,,11,x,,,,,,,,,,,
+Ada_12,Ada,,Hecatomnus,Caria,0,2076,2,Caria,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,satrap ,403,queen,603,,,,,,,,,,,,,9,,,11,x,,,,,,,,,,,
+Adrastus (2)_13,Adrastus (2),,NA,Aphrodisias,1005,1005,1,Aphrodisias,1005,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Peripatetic philosopher,102,teacher,110,,,,,,,,,,,,,,2,0.2,14,x,,,,,,,,,,,
+Adrianus_14,Adrianus,,NA,Tyre,694,2333,1,Tyre,694,Rome,0,Ephesus,0,Athens,0,Rome,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,sophist,109,,,,,,,,,,,,,,,30,,0.1,14,x,x,,,,,,,,,,
+Aedesisus_15,Aedesisus,,NA,Cappadocia,0,2072,1,Pergamum,828,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,neoplatonist,102,teacher,110,,,,,,,,,,,,,32,,0.2,15,x,
+Aelian_16,Aelian,Claudius Aelianus,NA,Praeneste,0,2265,2,Caesaria,0,Rome,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,stoic,102,,,,,,,,,,,,,,,31,,,18,x,x
+Aelianus_17,Aelianus,,NA,NA,0,<Null>,3,NA,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,military writer,107,,,,,,,,,,,,,,,,2,0.1,18,x,
+Aelius_18,Aelius,Lucius,NA,Rome,0,2271,1,Rome,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,literary scholar,104,stoic,102,,,,,,,,,,,,,16,,0.2,18,x,
+Aelius Antipater_19,Aelius Antipater,,NA,Hieropolis,0,#N/A,1,Rome,0,Bithynia,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,sophist,109,secretary,422,teacher,110,senator,402,governor,403,historian,108,,,,,30,,,18,x,
+Aelius Lucius_20,Aelius Lucius,,NA,Lanuvium,0,2173,3,Rome,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,literary scholar,104,grammarian,114,stoic,102,Equestrian,0,,,,,,,,,18,,,18,x,
+Aelius Caesar_21,Aelius Caesar,Lucius,NA,NA,0,<Null>,3,Rome,0,Pannonia,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,consul,407,consul ,407,governor,406,,,,,,,,,,,28,,,18,x,
+Aelius Gallus_22,Aelius Gallus,,NA,NA,0,<Null>,3,Rome,0,Egypt,0,Arabia Fellix,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,prefect,408,governor,406,doctor,304,writer,304,,,,,,,,,22,,,18,x,
+Aelius Marcianus_23,Aelius Marcianus,,NA,eastern empire,0,2122,2,NA,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,lawyer,409,writer,107,,,,,,,,,,,,,31,,,19,x,
+Aelius Melissus_24,Aelius Melissus,,NA,NA,0,<Null>,3,NA,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,grammarian,114,,,,,,,,,,,,,,,28,,,19,x,
+Aelius Paetus_25,Aelius Paetus,Sextus,NA,NA,0,<Null>,3,Rome,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,lawyer,409,writer,107,consul,407,,,,,,,,,,,15,,,19,x,
+Aelius Promotus_26,Aelius Promotus,,NA,Alexandria,0,2014,2,Alexandria,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,doctor,304,writer,107,,,,,,,,,,,,,,2,,19,x,
+Aelius Seianus_27,Aelius Seianus,Lucius,L. Seius Strabo,Volsinii,0,2344,3,Rome,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,prefect,408,consul,407,conspirator,504,,,,,,,,,,,23,,,19,x,
+Aelius Tubero_28,Aelius Tubero,Lucius,NA,NA,0,<Null>,3,Rome,0,Pharsalus,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,praetor,420,historian,108,academic philosopher,102,,,,,,,,,,,21,,,19,x,
+Aelius Tubero_29,Aelius Tubero,Quintus,Lucius Aelius Tubero,NA,0,<Null>,3,Rome,0,Pharsalus,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,lawyer,409,writer,107,historian,108,,,,,,,,,,,22,,,19,x,
+Aemilius Aemilianus_30,Aemilius Aemilianus,Marcus,NA,NA,0,<Null>,3,Moesia,0,Italy,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,governor,406,emperor,601,,,,,,,,,,,,,33,,0.3,19,x,
+Aemilius Asper_31,Aemilius Asper,,NA,NA,0,<Null>,3,NA,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,literary scholar,104,grammarian,114,,,,,,,,,,,,,,2,,20,x
+Aemilius Laetus_32,Aemilius Laetus,Quintus,,Thaenae,0,2312,3,Rome,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,praetorian prefect,408,conspirator,504,,,,,,,,,,,,,30,,,20,x
+Aemilius Lepidus_33,Aemilius Lepidus,Manius,grandson of (three),NA,0,<Null>,3,Rome,0,Asia,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,proconsul,410,consul ,407,,,,,,,,,,,,,23,,0.1,20,x
+Aemilius Lepidus (1)_34,Aemilius Lepidus (1),Marcus,NA,NA,0,<Null>,3,Rome,0,Abydos,765,Sicily,0,Liguria,0,Mutina,0,Parma,0,Liguria,0,Gaul,0,,,,,,,,,,,,,,,,,,,,,,,Praetor,420,consul,407,colony founder,406,pontifex maximus,403,censor,404,ambassador,426,consul,407,agronomer,308,15,,0.3,20,x
+Aemilius Lepidus (2)_35,Aemilius Lepidus (2),Marcus,descendant of (one),NA,0,<Null>,3,Rome,0,Gaul,0,Rome,0,Sardinia,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Consul,407,proconsul,410,,,,,,,,,,,,,19,,0.3,20,x
+Aemilius Lepidus (3)_36,Aemilius Lepidus (3),Marcus,son of (two),NA,0,<Null>,3,Rome,0,Spain,0,Gaul,0, Rome,0,Africa,0,Sicily,0,Circeii,0,,,,,,,,,,,,,,,,,,,,,,,,,Consul,407,magister equitum,422,governor,406,pontifex maximus,403,consul,407,,,,,,,21,,0.6,20,x
+Aemilius Lepidus (4)_37,Aemilius Lepidus (4),Marcus,son of (three),NA,0,<Null>,3,Rome,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,conspirator,504,,,,,,,,,,,,,,,21,,0.1,20,x
+Aemilius Lepidus (5)_38,Aemilius Lepidus (5),Marcus,Paullus Aemilius Lepidus,NA,0,<Null>,3,Rome,0,Pannonia,0,Dalmatia,0,Tarraconensis,0,Asia,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,consul,407,commander ,417,governor,406,proconsul,424,,,,,,,,,22,,,21,x
+Aemilius Lepidus (6)_39,Aemilius Lepidus (6),Marcus,Aemilius Lepidus (6),NA,0,<Null>,3,Rome,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,conspirator,504,,,,,,,,,,,,,,,24,,,21,x
+Aemlius Lepidus_40,Aemlius Lepidus,Paullus,L. Aemlius Paullus,NA,0,<Null>,3,Rome,0,Sicily,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,suffect consul,407,proconsul,410,censor,404,augur,309,frater arvalis,0,,,,,,,21,,,21,x
+Aemilius Macer_41,Aemilius Macer,,NA,Verona,0,2341,3,Verona,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,poet,113,,,,,,,,,,,,,,,22,,0.1,21,x
+Aemilius Papinianus_42,Aemilius Papinianus,,NA,Africa,0,#N/A,3,Africa,0,Rome,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,lawyer,409,prefect,408,writer,107,,,,,,,,,,,31,,0.5,21,x
+Aemilius Paullus (1)_43,Aemilius Paullus (1),Lucius,NA,NA,0,<Null>,3,Rome,0,Illyria,0,Cannae,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,consul,407,general,412,,,,,,,,,,,,,14,,0.2,21,x
+Aemilius Paullus (2)_44,Aemilius Paullus (2),Lucius,NA,NA,0,<Null>,3,Rome,0,Further Spain,0,Asia,0,Liguria,0,Pydna,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,augur,309,governor,406,general,412,commissioner to Maced.,406,consul,407,consul,407,censor,404,,,16,,,21,x
+Aemilius Paullus (3)_45,Aemilius Paullus (3),Lucius,son of (two),NA,0,<Null>,3,Rome,0,Macedonia,0,Mutina,0,Miletus,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,quaestor,418,curule aedile,421,praetor,420,consul,407,,,,,,,,,20,,0.2,22,x
+Aemilius Paullus (4)_46,Aemilius Paullus (4),Lucius,Paullus Aemilius Lepidus,NA,0,<Null>,3,Rome,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,consul,406,conspirator,504,,,,,,,,,,,,,23,,,22,x
+Aemilius Regillus_47,Aemilius Regillus,Lucius,NA,NA,0,<Null>,3,Rome,0,Myonnesus,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,praetor,420,admiral,419,,,,,,,,,,,,,15,,,22,x
+Aemilius Scaurus_48,Aemilius Scaurus,Mamercus,NA,NA,0,<Null>,3,Rome,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,orator,411,advocate,409,suffect consul,407,,,,,,,,,,,23,,0.1,22,x
+Aemilius Scaurus (1)_49,Aemilius Scaurus (1),Marcus,NA,NA,0,<Null>,3,Rome,0,Liguria,0,Asia,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,consul,407,censor,404,senator,402,ambassador,426,,,,,,,,,18,,0.6,22,x
+Aemilius Scaurus (2)_50,Aemilius Scaurus (2),Marcus,son of (one),NA,0,<Null>,3,Rome,0,Judaea,0,Nabataea,0,Sardinia,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,quaestor,418,aedile,421,praetor,420,governor,406,,,,,,,,,20,,0.3,22,x
+Aeneas (Aineias) Tacticus_51,Aeneas (Aineias) Tacticus,,NA,Stymphalos,296,296,1,Arcadia,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,military writer,107,general,412,,,,,,,,,,,,,8,,0.2,23,x
+Aenesidemus_52,Aenesidemus,,NA,Cnossus,967,967,1,Alexandria,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,sceptical philosopher,102,teacher,110,,,,,,,,,,,,,,-1,0.2,23,x
+Aeschines_53,Aeschines,,NA,Athens,361,361,1,Athens,361,Megalopolis,0,Macedonia,0,Rhodes,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,orator,411,ambassador,426,teacher of oratory,110,,,,,,,,,,,9,,2.1,25,x
+Aeschines Socraticus_54,Aeschines Socraticus,,NA,Sphettus_(Attica),0,#N/A,3,Athens,361,Syracuse,0,Athens,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,writer,107,socratic philosopher,102,,,,,,,,,,,,,8,,0.3,26,x
+Aeschylus_55,Aeschylus,,NA,Eleusis,362,362,1,Athens,361,Syracuse,0,Athens,0,Gela,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,dramatist,206,tragic poet,105,,,,,,,,,,,,,4,,4.4,26,x
+Aesopus_56,Aesopus,,NA,NA,0,<Null>,3,Rome,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,actor,207,,,,,,,,,,,,,,,20,,0.2,29,x
+A_tius (1)_57,A_tius (1),,NA,NA,0,<Null>,3,NA,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,writer,107,philosopher,102,,,,,,,,,,,,,,1,0.2,30,x
+A_tius (2)_58,A_tius (2),,NA,Amida,0,#N/A,3,Alexandria,0,Constantinople,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,physician ,307,writer,107,,,,,,,,,,,,,44,,0.2,30,x
+Aetius_59,Aetius,Flavius,Gaudentius,Durostorum,0,2121,3,Rome,0,Gaul,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,General,412,patrician,604,consul,407,consul,407,consul,407,governor (patrikios),406,,,,,40,,0.3,31,x
+Afranius (1)_60,Afranius (1),Lucius,NA,NA,0,<Null>,3,Rome,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,comic poet,118,,,,,,,,,,,,,,,,-2,0.2,33,x
+Afranius (2)_61,Afranius (2),Lucius,NA,Picenum,0,2259,3,Rome,0,Gaul,0,Asia,0,Hither Spain,0,Ilerda,0,Pharsalus,0,Thapsus,0,,,,,,,,,,,,,,,,,,,,,,,,,legate,413,praetor,420,proconsul,410,consul,407,governor,406,,,,,,,20,,0.3,33,x
+Afranius Burrus_62,Afranius Burrus,Sextus,NA,Narbonensis,0,2217,1,Rome,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,procurator,424,praetorian prefect,408,,,,,,,,,,,,,25,,,33,x
+Agasias (1)_63,Agasias (1),,Dositheus,Ephesus,844,844,1,NA,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,sculptor,201,,,,,,,,,,,,,,,18,,0.1,36,x
+Agasias (2)_64,Agasias (2),,Menophilus,Ephesus,844,844,1,Delos,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,sculptor,201,,,,,,,,,,,,,,,18,,0.1,36,x
+Agatharchides_65,Agatharchides,,NA,Cnidus,0,2096,3,Alexandria,0,Athen,361,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,historian,108,geographer,308,literary scholar,104,,,,,,,,,,,17,,0.2,36,x
+Agatharchus_66,Agatharchus,,NA,Samos,864,864,1,Athens,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,painter,202,,,,,,,,,,,,,,,5,,0.3,36,x
+Agathias_67,Agathias,Agathias Scholasticus,NA,Myrina,25,502,1,Alexandria,0,Constantinople,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,lawyer,409,writer,107,historian,108,poet,113,,,,,,,,,44,,0.6,36,x
+Agathinus_68,Agathinus,,NA,Sparta,345,345,1,Sparta,345,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,physician ,307,writer,107,,,,,,,,,,,,,,1,0.2,36,x
+Agathocles (1)_69,Agathocles (1),,Carcinus,Termae,0,2311,3,Syracuse,47,Croton,0,Tarentum,0,Himera,0,Carthage,0,Bruttium,0,Corcyra,0,,,,,,,,,,,,,,,,,,,,,,,,,general,412,governor,406,tyrant,605,,,,,,,,,,,10,,1.2,37,x
+Agathocles (2)_70,Agathocles (2),,,Cyzicus,,2116,3,NA,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,literary scholar,104,grammarian,114,,,,,,,,,,,,,14,,,37,x
+Agathon_71,Agathon,,Tisamenus,Athens,361,361,1,Athens,361,Macedon,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Tragic Poet,105,,,,,,,,,,,,,,,6,,0.6,37,x
+Agennius Urbicus_72,Agennius Urbicus,,NA,NA,0,<Null>,3,NA,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Writer,107,geographer,308,,,,,,,,,,,,,,5,0.1,39,x
+Agesilaus II_73,Agesilaus II,,Agis II,Sparta,345,345,1,Sparta,345,Asia,0,Corinth,0,Coronea,0,Acarnania,0,Boeotia,0,Asia,0,Egypt,0,,,,,,,,,,,,,,,,,,,,,,,Spartan King,603,general,412,,,,,,,,,,,,,8,,0.9,39,x
+Agis II_74,Agis II,,Archidamus II,Sparta,345,345,1,Sparta,345,Mantinea,0,Decelea,0,Athens,0,Elis,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Spartan King,603,general,412,,,,,,,,,,,,,6,,0.3,40,x
+Agis III_75,Agis III,,NA,Sparta,345,345,1,Sparta,345,Crete,0,Megalopolis,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Spartan King,603,general,412,,,,,,,,,,,,,9,,0.3,40,x
+Agis IV_76,Agis IV,,Eudamidas,Sparta,345,345,1,Sparta,345,Aetolia,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Spartan King,603,general,412,revolutionary,504,,,,,,,,,,,13,,0.3,40,x
+Agoracritus_77,Agoracritus,,NA,Paros,509,509,1,Coronea,0,Athens,0,Rhamnus,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,sculptor,201,,,,,,,,,,,,,,,6,,0.3,43,x
+Agrippa_78,Agrippa,,NA,NA,0,,0,NA,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Pyrrhonist sceptic,102,,,,,,,,,,,,,,,,,,47,x
+Agroecius_79,Agroecius,,NA,NA,0,,0,NA,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,bishop,701,grammarian,114,,,,,,,,,,,,,41,,,47,x
+Agyrrhius_80,Agyrrhius,,NA,Athens,361,361,1,Athens,361,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,politician,427,orator,411,,,,,,,,,,,,,7,,0.2,47,x
+Alaric_81,Alaric,,NA,Germany,0,,0,Germany,0,Balkans,0,Rome,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,general,412,,,,,,,,,,,,,,,39,,,49,x
+Albinovanus_82,Albinovanus,Celsus,NA,NA,0,<Null>,3,Rome,0,Armenia,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,poet,113,secretary,422,,,,,,,,,,,,,22,,0.2,50,x
+Albinovanus Pedo_83,Albinovanus Pedo,,,NA,0,,0,Rome,0,Germany,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,commander (praefectus),417,epigrammatist,113,,,,,,,,,,,,,23,,,50,x
+Albinus (1)_84,Albinus (1),,NA,NA,0,<Null>,3,Smyrna,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,platonist philosopher,102,,,,,,,,,,,,,,,29,,0.1,50,x
+Albinus (2)_85,Albinus (2),,,NA,0,,0,Rome,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,"writer on music, geometry, dialectic",102,consul,407,,,,,,,,,,,,,36,,,50,x
+Albucius_86,Albucius,Titus,NA,NA,0,,0,Rome,0,Athens,0,Sardinia,0,Athens,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,epicurean,102,writer,107,governor,406,exile,0,,,,,,,,,18,,,51,x
+Albucius Silus_87,Albucius Silus,Gaius,NA,Novaria,,,3,Rome,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,orator,411,teacher,110,,,,,,,,,,,,,22,,,51,x
+Alcaeus (1)_88,Alcaeus (1),,,Mytilene,0,,3,Mytilene,0,Egypt,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,lyric poet,101,politician,427,revolutionary,504,,,,,,,,,,,-3,,,51,x
+Alcaeus (2)_89,Alcaeus (2),,NA,Athens,0,,2,Athens,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,old comic poet,118,,,,,,,,,,,,,,,7,,,51,x
+Alcaeus (3)_90,Alcaeus (3),,,Messene,0,,3,Messene,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,epigrammatist,113,iambic poet,101,,,,,,,,,,,,,14,,,51,x
+Alcamenes_91,Alcamenes,,NA,Athens,0,,2,Athens,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,archizing sculptor,201,,,,,,,,,,,,,,,6,,,51,x
+Alcibiades_92,Alcibiades,,Cleinias,Athens,361,361,3,Athens,0,Argos,0,Sparta,0,Athens,0,Samos,0,Cyzicus,0,Athens,0,Notium,0,Aegespotami,0,Phrygia,0,,,,,,,,,,,,,,,,,,,general,412,politician,427,orator,411,admiral,0,rebel,0,ambassador,426,,,,,6,,0.7,54,x
+Alcidamas_93,Alcidamas,,NA,Elaea,0,#N/A,1,Athens,361,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,rhetor,119,sophist,109,writer,107,teacher,110,,,,,,,,,,-4,0.2,54,x
+Alcidas_94,Alcidas,,NA,Sparta,345,345,1,Sparta,0,Mytilene,0,Corcyra,0,Heraclea,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Commander,417,founder,0,,,,,,,,,,,,,5,,0.2,54,x
+Alcinous (2)_95,Alcinous (2),,NA,NA,0,<Null>,3,NA,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Platonist philosopher,102,writer,107,,,,,,,,,,,,,,2,0.3,54,x
+Alciphron_96,Alciphron,,NA,NA,0,<Null>,3,NA,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,sophist,109,writer,107,,,,,,,,,,,,,,2,0.1,54,x
+Alcmaeon (2)_97,Alcmaeon (2),,NA,Croton,56,56,1,NA,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,pythagorean philosopher,102,writer,107,,,,,,,,,,,,,,-5,0.2,55,x
+Alcman_98,Alcman,,NA,Laconia,,2171,2,Sparta,345,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Lyric Poet,101,,,,,,,,,,,,,,,,-7,0.8,55,x
