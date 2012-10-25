@@ -1,4 +1,5 @@
 **/*.swp
+**/**/*.swp
 .~lock*
 data/.~lock*
 *~
