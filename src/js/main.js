@@ -38,10 +38,11 @@ function PopulateArrays() {
         if (rand > .7) {
             var neighbor = Math.floor(Math.random() * peopledata.length);
             edgeArray.push({source: i, target: neighbor});
-            if(nodeToEdgeArray[peopledata[i]['unique_id']] == null) {
-                nodeToEdgeArray[peopledata[i]['unique_id']] = [];
+            var currentPersonID = peopledata[i]['unique_id'];
+            if(nodeToEdgeArray[currentPersonID] == null) {
+                nodeToEdgeArray[currentPersonID] = [];
             }
-            nodeToEdgeArray[peopledata[i]['unique_id']].push(edgeArray.length - 1);
+            nodeToEdgeArray[currentPersonID].push(edgeArray.length - 1);
         }
     }
 }
