@@ -77,12 +77,10 @@ function DrawOverviewGraph(force, svg) {
     });
 }
 
-function DrawIndividualGraph(currentSite) {
-    if (nodeToEdgeArray[currentSite.unique_id] == null) return;
+function DrawIndividualGraph(currentPerson) {
+    var currentPersonEdges = nodeToEdgeArray[currentPerson.unique_id];
+    if (currentPersonEdges == null) return;
     
-    var neighbors = [currentSite];
-    var individualEdgeArray = [];
-     
     var svg = d3.select("#individual").append("svg")
         .attr("width", width)
         .attr("height", height);
@@ -94,8 +92,6 @@ function DrawIndividualGraph(currentSite) {
 
     var neighbors = [currentPerson];
     var individualEdgeArray = [];
-    var currentPersonEdges = nodeToEdgeArray[currentPerson.unique_id];
-    if (currentPersonEdges == null) return;
     for(var i = 0; i < currentPersonEdges.length; i++) {
         var targetIndex = edgeArray[currentPersonEdges[i]].target.index;
         neighbors.push(peopledata[targetIndex]);
