@@ -78,6 +78,11 @@ function DrawOverviewGraph(force, svg) {
 }
 
 function DrawIndividualGraph(currentSite) {
+    if (nodeToEdgeArray[currentSite.unique_id] == null) return;
+    
+    var neighbors = [currentSite];
+    var individualEdgeArray = [];
+     
     var svg = d3.select("#individual").append("svg")
         .attr("width", width)
         .attr("height", height);
@@ -87,9 +92,6 @@ function DrawIndividualGraph(currentSite) {
         .linkDistance(30)
         .size([width, height]);
 
-    var neighbors = [currentSite];
-    var individualEdgeArray = [];
-    if (nodeToEdgeArray[currentSite.unique_id] == null) return;
     for(var i = 0; i < nodeToEdgeArray[currentSite.unique_id].length; i++) {
         var targetIndex = 
             edgeArray[nodeToEdgeArray[currentSite.unique_id][i]].target.index;
