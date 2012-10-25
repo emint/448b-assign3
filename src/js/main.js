@@ -1,12 +1,19 @@
 var PEOPLE_PATH = "../../data/people_1_100.csv";
 var PLACES_PATH = "../../data/greek_cities.csv";
+
 var filesToLoad = 2;
+
 var width = 660,
     height = 660;
+
 var peopledata,
     placesdata;
+
 var edgeArray = [];
 var nodeToEdgeArray = {};
+
+
+
 
 d3.csv(PEOPLE_PATH, function(csv) {
     peopledata = csv;
@@ -41,7 +48,8 @@ function PopulateArrays() {
             if(nodeToEdgeArray[peopledata[i]['unique_id']] == null) {
                 nodeToEdgeArray[peopledata[i]['unique_id']] = [];
             }
-            nodeToEdgeArray[peopledata[i]['unique_id']].push(edgeArray.length - 1);
+            nodeToEdgeArray[peopledata[i]['unique_id']].push(
+                edgeArray.length - 1);
         }
     }
 }
@@ -81,9 +89,11 @@ function DrawIndividualGraph(currentPerson) {
     var currentPersonEdges = nodeToEdgeArray[currentPerson.unique_id];
     if (currentPersonEdges == null) return;
     
+    d3.selectAll(".ind-swg").remove();    
     var svg = d3.select("#individual").append("svg")
         .attr("width", width)
-        .attr("height", height);
+        .attr("height", height)
+        .attr("class", "ind-swg");
 
     var force = d3.layout.force()
         .charge(-120)
