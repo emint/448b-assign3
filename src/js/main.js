@@ -1,47 +1,60 @@
-var PEOPLE_PATH = "../../data/people_1_100.csv";
-var PLACES_PATH = "../../data/greek_cities.csv";
+function Model() {
+    this.width = 660;
+    this.eight = 660;
+    
+    this.peopledata = [];
+    this.placesdata = [];
 
-var filesToLoad = 2;
+    this.edgeArray = [];
+    this.nodeToEdgeArray = {};
+    
+    var PEOPLE_PATH = "../../data/people_1_100.csv";
+    var PLACES_PATH = "../../data/greek_cities.csv";
 
-var width = 660,
-    height = 660;
-
-var peopledata,
-    placesdata;
-
-var edgeArray = [];
-var nodeToEdgeArray = {};
+    var filesToLoad = 2;
 
 
-d3.csv(PEOPLE_PATH, function(csv) {
-    peopledata = csv;
-    if ((--filesToLoad) < 1) initialize();
-});
+    var populateArrays = function () {
+        for(var i = 0; i < this.peopledata.length; i++) {
+            var rand = Math.random();
+            var unqId = this.nodeToEdgeArray[this.peopledata[i]['unique_id']];
+            if (rand > .7) {
+                var neighbor = Math.floor(Math.random() * 
+                    this.peopledata.length);
+                this.edgeArray.push({source: i, target: neighbor});
+                if(unqId == null) {
+                    unqId = []
+                }
+                unqId.push(this.edgeArray.length - 1);
+            }
+        }
+    }.bind(this);
+ 
+    this.loadData = function() {
+        d3.csv(PEOPLE_PATH, function(csv) {
+            this.peopledata = csv;
+            if ((--filesToLoad) < 1) {
+                populateArrays();
+                initialize();
+            }
+        }.bind(this));
 
-d3.csv(PLACES_PATH, function(csv) {
-    placesdata = csv;
-    if ((--filesToLoad) < 1) initialize();
-});
+        d3.csv(PLACES_PATH, function(csv) {
+            this.placesdata = csv;
+            if ((--filesToLoad) < 1) {
+                populateArrays();
+                initialize();
+            }
+        }.bind(this));
+
+    }
+};
+
+var model = new Model();
 
 function initialize() {
-    populateArrays();
-    drawGraph("#overview", "overview-svg", peopledata, edgeArray)
+    drawGraph("#overview", "overview-svg", model.peopledata, model.edgeArray)
         .on("click", drawIndividualGraph);
-}
-
-function populateArrays() {
-    for(var i = 0; i < peopledata.length; i++) {
-        var rand = Math.random();
-        if (rand > .7) {
-            var neighbor = Math.floor(Math.random() * peopledata.length);
-            edgeArray.push({source: i, target: neighbor});
-            if(nodeToEdgeArray[peopledata[i]['unique_id']] == null) {
-                nodeToEdgeArray[peopledata[i]['unique_id']] = [];
-            }
-            nodeToEdgeArray[peopledata[i]['unique_id']].push(
-                edgeArray.length - 1);
-        }
-    }
 }
 
 function drawIndividualGraph(currentPerson) {
@@ -66,14 +79,14 @@ function drawIndividualGraph(currentPerson) {
 // to node object for further custom functionality.
 function drawGraph(divToAddTo, graphClass, nodes, edges) {
     var svg = d3.select(divToAddTo).append("svg")
-        .attr("width", width)
-        .attr("height", height)
+        .attr("width", model.width)
+        .attr("height", model.height)
         .attr("class", graphClass);
 
     var force = d3.layout.force()
         .charge(-120)
         .linkDistance(30)
-        .size([width, height]);
+        .size([model.width, model.height]);
 
     force
         .nodes(nodes)
@@ -104,3 +117,5 @@ function drawGraph(divToAddTo, graphClass, nodes, edges) {
         });
     return node; 
 }
+
+model.loadData();
