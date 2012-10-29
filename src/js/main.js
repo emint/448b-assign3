@@ -1,3 +1,4 @@
+
 var PEOPLE_PATH = "../../data/people_full.csv";
 var PLACES_PATH = "../../data/greek_cities.csv";
 
@@ -6,7 +7,7 @@ var filesToLoad = 2;
 var width = 450,
     height = 450;
 
-var greatestPolisNumber = 1000;
+var greatestPolisNumber = 400;
 
 var peopledata,
     placesdata;
@@ -96,8 +97,9 @@ function populatePolisResidents() {
 function addPersonToPlace(personIndex, placeCode) {
     // If placeCode is 0, the person has no associated place data for that field.
     // If placeCode > greatestPolisNumber, we have no polis information for that polis number.
+    // If placeCode is not a number, the person's location in people csv is recorded as a string (e.g. "Africa") 
 
-    if (placeCode == 0 || placeCode > greatestPolisNumber) return; 
+    if (placeCode == 0 || placeCode > greatestPolisNumber || isNaN(placeCode)) return; 
     var placeIndex = placeCode - 1; // placeCode starts at 1 (polis_number from csv), placeIndex starts at 0
     if(placesToPeople[placeIndex] == null) {
         placesToPeople[placeIndex] = [personIndex];
