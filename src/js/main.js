@@ -1,18 +1,19 @@
-
-var PEOPLE_PATH = "../../data/people_1_100.csv";
+var PEOPLE_PATH = "../../data/people_full.csv";
 var PLACES_PATH = "../../data/greek_cities.csv";
 
 var filesToLoad = 2;
 
-var width = 660,
-    height = 660;
+var width = 450,
+    height = 450;
+
+var greatestPolisNumber = 1000;
 
 var peopledata,
     placesdata;
 
 var edgeArray = [];
 var nodeToEdgeArray = {};
-
+var placesToPeople = {};
 
 d3.csv(PEOPLE_PATH, function(csv) {
     peopledata = csv;
@@ -25,39 +26,100 @@ d3.csv(PLACES_PATH, function(csv) {
 });
 
 function initialize() {
-    populateArrays();
-    drawGraph("#overview", "overview-svg", peopledata, edgeArray)
+    populatePolisResidents();
+    createEdgesBetweenPlaces();
+    nodes = placesdata.filter(function(d) { 
+        return nodeToEdgeArray[d['polis_number']] != null;
+        });
+    drawGraph("#overview", "overview-svg", nodes, edgeArray)
         .on("click", drawIndividualGraph);
 }
 
 function populateArrays() {
-    for(var i = 0; i < peopledata.length; i++) {
+    for(var i = 0; i < placesdata.length; i++) {
         var rand = Math.random();
         if (rand > .7) {
             var neighbor = Math.floor(Math.random() * peopledata.length);
             edgeArray.push({source: i, target: neighbor});
-            var currentPersonID = peopledata[i]['unique_id'];
-            if(nodeToEdgeArray[currentPersonID] == null) {
-                nodeToEdgeArray[currentPersonID] = [];
+            var currentPlaceID = placesdata[i]['polis_number'];
+            if(nodeToEdgeArray[currentPlaceID] == null) {
+                nodeToEdgeArray[currentPlaceID] = [];
             }
-            nodeToEdgeArray[currentPersonID].push(edgeArray.length - 1);
+            nodeToEdgeArray[currentPlaceID].push(edgeArray.length - 1);
         }
     }
 }
 
-function drawIndividualGraph(currentPerson) {
-    var currentPersonEdges = nodeToEdgeArray[currentPerson.unique_id];
-    if (currentPersonEdges == null) return;
+function createEdgesBetweenPlaces() {
+    for(var firstPolisNumber in placesToPeople) {
+        for(var secondPolisNumber in placesToPeople) {
+            if(firstPolisNumber != secondPolisNumber) {
+                if(arraysIntersect(placesToPeople[firstPolisNumber], placesToPeople[secondPolisNumber])) {
+                    edgeArray.push({source: placesdata[firstPolisNumber], target: placesdata[secondPolisNumber]});
+                    var currentPlacePolisNumber = placesdata[firstPolisNumber]['polis_number'];
+                    if(nodeToEdgeArray[currentPlacePolisNumber] == null) {
+                        nodeToEdgeArray[currentPlacePolisNumber] = [];
+                    }
+                    nodeToEdgeArray[currentPlacePolisNumber].push(edgeArray.length - 1);
+                }
+            }
+        }
+    }
+}
+
+function arraysIntersect(arrayOne, arrayTwo) {
+    for(var i = 0; i < arrayOne.length; i ++) {
+        if(arrayTwo.indexOf(arrayOne[i]) != -1) {
+            return true;
+        }
+    }
+    return false;
+}
+
+function populatePolisResidents() {
+    for(var i = 0; i < peopledata.length; i++) {
+        var currentPerson = peopledata[i];
+        var birthplace = currentPerson['Birthplace_Code'];
+        if(birthplace != "") {
+            addPersonToPlace(i, birthplace);
+        }
+
+        for(var j = 1; j < 20; j++) {
+            var newPlace = currentPerson["WL_Place_code_#" + j];
+            if(newPlace != "") {
+                addPersonToPlace(i, newPlace);
+            }
+        }
+    }
+}
+
+function addPersonToPlace(personIndex, placeCode) {
+    // If placeCode is 0, the person has no associated place data for that field.
+    // If placeCode > greatestPolisNumber, we have no polis information for that polis number.
+
+    if (placeCode == 0 || placeCode > greatestPolisNumber) return; 
+    var placeIndex = placeCode - 1; // placeCode starts at 1 (polis_number from csv), placeIndex starts at 0
+    if(placesToPeople[placeIndex] == null) {
+        placesToPeople[placeIndex] = [personIndex];
+    } else {
+        placesToPeople[placeIndex].push(personIndex);
+    }
+}
+
+function drawIndividualGraph(currentPlace) {
+    var currentPlaceEdges = nodeToEdgeArray[currentPlace['polis_number']];
+    if (currentPlaceEdges == null) return;
     
     //Remove previous graph if it exists 
     d3.selectAll(".ind-svg").remove();    
 
-    var neighbors = [currentPerson];
+    var neighbors = [currentPlace];
     var individualEdgeArray = [];
-    for(var i = 0; i < currentPersonEdges.length; i++) {
-        var targetIndex = edgeArray[currentPersonEdges[i]].target.index;
-        neighbors.push(peopledata[targetIndex]);
-        individualEdgeArray.push({source: 0, target: i + 1});
+    for(var i = 0; i < currentPlaceEdges.length; i++) {
+        var target = edgeArray[currentPlaceEdges[i]].target;
+        var targetIndex = target['polis_number'] - 1;
+        neighbors.push(placesdata[targetIndex]);
+        individualEdgeArray.push({source: currentPlace, target: placesdata[targetIndex]});
     }
 
     drawGraph("#individual", "ind-svg", neighbors, individualEdgeArray);
