@@ -4,8 +4,8 @@ var PLACES_PATH = "../../data/greek_cities.csv";
 
 var filesToLoad = 2;
 
-var width = 450,
-    height = 450;
+var width = 550,
+    height = 550;
 
 var greatestPolisNumber = 400;
 
@@ -13,8 +13,6 @@ var peopledata,
     placesdata;
 
 var edgeArray = [];
-var nodeToEdgeArray = {};
-var placesToPeople = {};
 
 d3.csv(PEOPLE_PATH, function(csv) {
     peopledata = csv;
@@ -30,38 +28,48 @@ function initialize() {
     populatePolisResidents();
     createEdgesBetweenPlaces();
     nodes = placesdata.filter(function(d) { 
-        return nodeToEdgeArray[d['polis_number']] != null;
+        return d['edges'] != null;
         });
-    drawGraph("#overview", "overview-svg", nodes, edgeArray)
-        .on("click", drawIndividualGraph);
+    var graph = drawGraph("#overview", "overview-svg", nodes, edgeArray);
+    graph['nodes']
+        .attr("id", function(d) { return d['polis_number']; })       
+        .on("click", drawIndividualGraph)
+        .on("mouseover", mouseEnteredNode)
+        .on("mouseout", mouseLeftNode);
+    graph['edges'].style("stroke-width", function(d) { 
+            return d['sharedPeople'].length;
+        });
 }
 
-function populateArrays() {
-    for(var i = 0; i < placesdata.length; i++) {
-        var rand = Math.random();
-        if (rand > .7) {
-            var neighbor = Math.floor(Math.random() * peopledata.length);
-            edgeArray.push({source: i, target: neighbor});
-            var currentPlaceID = placesdata[i]['polis_number'];
-            if(nodeToEdgeArray[currentPlaceID] == null) {
-                nodeToEdgeArray[currentPlaceID] = [];
-            }
-            nodeToEdgeArray[currentPlaceID].push(edgeArray.length - 1);
-        }
-    }
+function mouseEnteredNode(currentPlace) {
+  d3.select(".node_toponym").remove();
+  var svg = d3.select("#overview")
+      .append("text")
+      .attr("class", "node_toponym")
+      .attr("dx", 12)
+      .attr("dy", ".35em")
+      .text(currentPlace['Toponym']);
+  console.log(currentPlace);
+}
+
+function mouseLeftNode(currentPlace) {
+  console.log("Goodbye world.");
 }
 
 function createEdgesBetweenPlaces() {
-    for(var firstPolisNumber in placesToPeople) {
-        for(var secondPolisNumber in placesToPeople) {
+    for(var firstPolisNumber = 0; firstPolisNumber < placesdata.length; firstPolisNumber++) {
+        for(var secondPolisNumber = 0; secondPolisNumber < placesdata.length; secondPolisNumber++) {
             if(firstPolisNumber != secondPolisNumber) {
-                if(arraysIntersect(placesToPeople[firstPolisNumber], placesToPeople[secondPolisNumber])) {
-                    edgeArray.push({source: placesdata[firstPolisNumber], target: placesdata[secondPolisNumber]});
+                var intersection = arraysIntersect(placesdata[firstPolisNumber]['people'], 
+                        placesdata[secondPolisNumber]['people']);
+                if (intersection.length != 0) {
+                    edgeArray.push({source: placesdata[firstPolisNumber], 
+                        target: placesdata[secondPolisNumber], sharedPeople: intersection});
                     var currentPlacePolisNumber = placesdata[firstPolisNumber]['polis_number'];
-                    if(nodeToEdgeArray[currentPlacePolisNumber] == null) {
-                        nodeToEdgeArray[currentPlacePolisNumber] = [];
+                    if(placesdata[firstPolisNumber]['edges'] == null) {
+                        placesdata[firstPolisNumber]['edges'] = [];
                     }
-                    nodeToEdgeArray[currentPlacePolisNumber].push(edgeArray.length - 1);
+                    placesdata[firstPolisNumber]['edges'].push(edgeArray.length - 1);
                 }
             }
         }
@@ -69,12 +77,16 @@ function createEdgesBetweenPlaces() {
 }
 
 function arraysIntersect(arrayOne, arrayTwo) {
-    for(var i = 0; i < arrayOne.length; i ++) {
-        if(arrayTwo.indexOf(arrayOne[i]) != -1) {
-            return true;
+    if (arrayOne == null || arrayTwo == null) return [];
+    var intersection = [];
+    var smaller = (arrayOne.length < arrayTwo.length ? arrayOne : arrayTwo);
+    var bigger  = (arrayOne.length < arrayTwo.length ? arrayTwo : arrayOne);
+    for(var i = 0; i < smaller.length; i ++) {
+        if(bigger.indexOf(smaller[i]) != -1) {
+            intersection.push(smaller[i]);
         }
     }
-    return false;
+    return intersection;
 }
 
 function populatePolisResidents() {
@@ -97,19 +109,20 @@ function populatePolisResidents() {
 function addPersonToPlace(personIndex, placeCode) {
     // If placeCode is 0, the person has no associated place data for that field.
     // If placeCode > greatestPolisNumber, we have no polis information for that polis number.
-    // If placeCode is not a number, the person's location in people csv is recorded as a string (e.g. "Africa") 
-
+    // If placeCode is not a number, the person's location in people csv is recorded as a string 
+    // (e.g. "Africa") 
     if (placeCode == 0 || placeCode > greatestPolisNumber || isNaN(placeCode)) return; 
-    var placeIndex = placeCode - 1; // placeCode starts at 1 (polis_number from csv), placeIndex starts at 0
-    if(placesToPeople[placeIndex] == null) {
-        placesToPeople[placeIndex] = [personIndex];
+    // placeCode starts at 1 (polis_number from csv), placeIndex starts at 0
+    var placeIndex = placeCode - 1;     
+    if(placesdata[placeIndex]['people'] == null) {
+        placesdata[placeIndex]['people'] = [personIndex];
     } else {
-        placesToPeople[placeIndex].push(personIndex);
+        placesdata[placeIndex]['people'].push(personIndex);
     }
 }
 
 function drawIndividualGraph(currentPlace) {
-    var currentPlaceEdges = nodeToEdgeArray[currentPlace['polis_number']];
+    var currentPlaceEdges = currentPlace['edges'];
     if (currentPlaceEdges == null) return;
     
     //Remove previous graph if it exists 
@@ -136,8 +149,8 @@ function drawGraph(divToAddTo, graphClass, nodes, edges) {
         .attr("class", graphClass);
 
     var force = d3.layout.force()
-        .charge(-120)
-        .linkDistance(30)
+        .charge(-250)
+        .linkDistance(100)
         .size([width, height]);
 
     force
@@ -167,5 +180,5 @@ function drawGraph(divToAddTo, graphClass, nodes, edges) {
             node.attr("cx", function(d) { return d.x; })
                 .attr("cy", function(d) { return d.y; });
         });
-    return node; 
+    return {nodes:node, edges:link}; 
 }
