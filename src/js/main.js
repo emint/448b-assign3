@@ -16,12 +16,16 @@ var excludedCities = ["Lipara", "Mylai", "Ledon", "Lokroi"];
 var lastHighlighted = [];
 
 var peopledata,
-    placesdata;
+    placesdata,
+    peopledataUnfiltered;
+
+var endeavors = ['culture', 'philosophy', 'economy', 'politics', 'military', 'religion'];
+var checkedEndeavors = [];
 
 var edgeArray = [];
 
 d3.csv(PEOPLE_PATH, function(csv) {
-    peopledata = csv;
+    peopledataUnfiltered = csv;
     if ((--filesToLoad) < 1) initialize();
 });
 
@@ -31,11 +35,32 @@ d3.csv(PLACES_PATH, function(csv) {
 });
 
 function initialize() {
+    createControlPanel();
+    drawGraphs();
+}
+
+function drawGraphs() {
+    peopledata = {};
+    edgeArray = [];
+    d3.selectAll("svg").remove();
+    checkedEndeavors = getCheckedEndeavors();
+    peopledata = peopledataUnfiltered.filter(function(d) {
+            for(var i = 0; i < checkedEndeavors.length; i++) {
+                var currentEndeavor = checkedEndeavors[i];
+                if(d[currentEndeavor] == 1) {
+                    return true;
+                }
+            }
+            return false;
+        });
+    console.log("filtered: " + peopledata.length + " unfitered: " + peopledataUnfiltered.length);
     populatePolisResidents();
     createEdgesBetweenPlaces();
+
     nodes = placesdata.filter(function(d) {
           return d['edges'] != null;
         });
+    
     var graph = drawGraph("#overview", "overview-svg", nodes, edgeArray);
     graph['nodes']
         .attr("id", function(d) { return d['polis_number']; })       
@@ -57,15 +82,24 @@ function initialize() {
         });
 }
 
+function getCheckedEndeavors() {
+    var checkedValues = [];
+    for(var i = 0; i < endeavors.length; i++) {
+        if (document.getElementById(endeavors[i] + "_checkbox").checked) {
+            checkedValues.push(endeavors[i]);
+        }
+    }
+    return checkedValues;
+}
+
 function getMostRepEndeavor(counts) {
     var endeavor = "";
     var maxCount = 0;
     // We do this manually to ensure that ties are broken in the same order
-    var keys = ['culture', 'philosophy', 'economy', 'politics', 'military', 'religion'];
-    for (var endeavorKey in keys) {
-        if(counts[keys[endeavorKey]] > maxCount) {
-           endeavor = keys[endeavorKey];
-           maxCount = counts[keys[endeavorKey]];
+    for (var endeavorKey in checkedEndeavors) {
+        if(counts[checkedEndeavors[endeavorKey]] > maxCount) {
+           endeavor = checkedEndeavors[endeavorKey];
+           maxCount = counts[checkedEndeavors[endeavorKey]];
         }
     }
     return endeavor;
@@ -134,7 +168,6 @@ function highlightEdges(edges, width, color) {
   for (var i=0; i < edges.length; i++) {
       var edge = edgeArray[edges[i]];
       var edgeId = "#n" + edge['source']['polis_number'] + "-" + edge['target']['polis_number']; 
-      console.log(edgeId + " - " + edge['counts']);
       d3.selectAll("#overview svg " + edgeId)
           .style("stroke", color)
           .style("stroke-width", width);
@@ -199,8 +232,10 @@ function createEdgesBetweenPlaces() {
 
 function getEndeavourCounts(peopleList) {
   var counts = {culture:0, economy:0, philosophy:0, politics:0, military:0, religion:0};
+  console.log("peopleList: "+ peopleList);
   for (var i=0; i<peopleList.length; i++) {
     var person = peopledata[peopleList[i]];
+    console.log("person: " + person + " peopleList[i]: " + peopleList[i]);
     counts['culture'] += parseInt(person['culture']);
     counts['economy'] += parseInt(person['economy']);
     counts['philosophy'] += parseInt(person['philosophy']);
@@ -225,6 +260,7 @@ function arraysIntersect(arrayOne, arrayTwo) {
 }
 
 function populatePolisResidents() {
+    console.log("In polis residents: " + peopledata.length);
     for(var i = 0; i < peopledata.length; i++) {
         var currentPerson = peopledata[i];
         var birthplace = currentPerson['Birthplace_Code'];
@@ -274,6 +310,24 @@ function drawIndividualGraph(currentPlace) {
 
     drawGraph("#individual", "ind-svg", neighbors, individualEdgeArray);
 }
+
+function createControlPanel() {
+    var checkboxesForm = d3.select("#control").append("form");
+   
+    var checkboxes = checkboxesForm.selectAll("label")
+        .data(endeavors).enter()
+        .append("label")
+        .text(function(d) {return d;})
+        .append("input")
+        .attr("class", "checkboxControl")
+        .attr("type", "checkbox")
+        .attr("checked", true)
+        .attr("id", function(d) {return d + "_checkbox";})
+        .attr("name", function(d) {return d;})
+        .attr("onClick", "drawGraphs()");
+}
+
+
 
 function drawIndividualGraphAsCirclePack(currentPlace) {
   var currentPlaceEdges = currentPlace['edges'];
