@@ -80,13 +80,51 @@ function getColorForEndeavor(endeavor) {
 }
 
 function mouseEnteredNode(currentPlace) {
-  d3.select(".node_toponym").remove();
-  var svg = d3.select("#overview")
+  d3.selectAll(".tooltip").remove();
+  var boxWidth = 140,
+      boxHeight = 40
+      offset = 0;
+  
+  var boxX = clipWidth((currentPlace.x + offset) - (boxWidth / 2), boxWidth),
+      boxY = clipHeight((currentPlace.y + offset) - (boxHeight / 2), boxHeight); 
+
+  d3.select("#overview svg")
+      .append("rect")
+      .attr("x", boxX)
+      .attr("y", boxY)
+      .attr("width", boxWidth)
+      .attr("height", boxHeight)
+      .attr("class", "tooltip")
+      .attr("fill", "#CECFDE")
+      .on("mouseout", function() { d3.selectAll(".tooltip").remove(); })
+      .on("mouseclick", drawIndividualGraphAsCirclePack(currentPlace)); 
+  d3.select("#overview svg")
       .append("text")
       .attr("class", "node_toponym")
-      .attr("dx", 12)
-      .attr("dy", ".35em")
+      .attr("text-anchor", "middle")
+      .attr("class", "tooltip")
+      .attr("x", boxX + boxWidth/2)
+      .attr("y", boxY + boxHeight/2)
+      .attr("fill", "white")
       .text(currentPlace['Toponym']);
+}
+
+function clipHeight(heightLoc, proposedHeight) {
+    if (heightLoc < 0) { 
+        return 0;
+    } else if ((heightLoc + proposedHeight) > height) {
+        return height - proposedHeight;
+    }
+    return heightLoc;
+}
+
+function clipWidth(widthLoc, proposedWidth) {
+    if (widthLoc < 0) {
+        return 0;
+    } else if ((widthLoc + proposedWidth) > width) {
+        return width - proposedWidth;
+    }
+    return widthLoc;
 }
 
 function createEdgesBetweenPlaces() {
