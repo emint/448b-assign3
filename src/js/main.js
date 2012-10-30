@@ -193,14 +193,16 @@ function drawIndividualGraph(currentPlace) {
 function drawIndividualGraphAsCirclePack(currentPlace) {
   var currentPlaceEdges = currentPlace['edges'];
   if (currentPlaceEdges == null) return;
+  
+  d3.selectAll(".ind-svg").remove();
 
   var neighbors = [];
   for(var i = 0; i < currentPlaceEdges.length; i++) {
       var edge = edgeArray[currentPlaceEdges[i]]; 
       var target = edge.target;
       var targetIndex = target['polis_number'] - 1;
-      neighbors.push({Toponym: placesdata[targetIndex]["Toponym"], 
-          value:edge['sharedPeople'].length});
+      neighbors.push({Toponym: placesdata[targetIndex]['Toponym'], 
+          value:edge['sharedPeople'].length, mostSharedEndev:getMostRepEndeavor(edge['counts'])});
   }
 
   var fill = d3.scale.category20c();
@@ -229,8 +231,21 @@ function drawIndividualGraphAsCirclePack(currentPlace) {
           return d.r ;    
       })
       .attr("fill", function(d) {
-          return "#FF0000";
+          return getColorForEndeavor(d['mostSharedEndev']);
       });
+  node.append("text")
+      .attr("text-anchor", "middle")
+      .attr("dy", ".3em")
+      .attr("fill", "white")
+      .attr("font-size", "12px")
+      .text(function(d) { return d['Toponym']; });
+
+  var svg = d3.select("#individual svg")
+      .append("text")
+      .attr("class", "individual_desc")
+      .attr("dx", "8")
+      .attr("dy", "12")
+      .text("View of the world from the perspective of " + currentPlace['Toponym'] +".");
 }
 
 // Draws graph with class 'graphClass' into specified div. Returns reference
@@ -242,8 +257,8 @@ function drawGraph(divToAddTo, graphClass, nodes, edges) {
         .attr("class", graphClass);
 
     var force = d3.layout.force()
-        .charge(-300)
-        .linkDistance(70)
+        .charge(-200)
+        .linkDistance(150)
         .size([width, height]);
 
     force
