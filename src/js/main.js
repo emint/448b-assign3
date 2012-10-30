@@ -16,8 +16,8 @@ var excludedCities = ["Lipara", "Mylai", "Ledon", "Lokroi"];
 var lastHighlighted = [];
 
 var peopledata,
-    placesdata,
-    peopledataUnfiltered;
+    peopledataUnfiltered,
+    placesdata;
 
 var endeavors = ['culture', 'philosophy', 'economy', 'politics', 'military', 'religion'];
 var checkedEndeavors = [];
@@ -42,6 +42,7 @@ function initialize() {
 function drawGraphs() {
     peopledata = {};
     edgeArray = [];
+    resetPlacesToPeople();
     d3.selectAll("svg").remove();
     checkedEndeavors = getCheckedEndeavors();
     peopledata = peopledataUnfiltered.filter(function(d) {
@@ -53,7 +54,6 @@ function drawGraphs() {
             }
             return false;
         });
-    console.log("filtered: " + peopledata.length + " unfitered: " + peopledataUnfiltered.length);
     populatePolisResidents();
     createEdgesBetweenPlaces();
 
@@ -80,6 +80,13 @@ function drawGraphs() {
         .attr("id", function(d) {
             return "n"+d['source']['polis_number'] + "-" + d['target']['polis_number'];
         });
+}
+
+function resetPlacesToPeople() {
+    for (var place in placesdata) {
+        placesdata[place]['people'] = null;
+        placesdata[place]['edges'] = null;
+    }
 }
 
 function getCheckedEndeavors() {
@@ -179,11 +186,9 @@ function resetEdgeProperties(edges) {
   for (var i=0; i < edges.length; i++) {
       var edge = edgeArray[edges[i]];
       var edgeId = "#n" + edge['source']['polis_number'] + "-" + edge['target']['polis_number']; 
-      //console.log(edgeId + " - " + edge['counts']);
       d3.selectAll("#overview svg " + edgeId)
           .style("stroke", getColorForEndeavor(getMostRepEndeavor(edge['counts'])))
           .style("stroke-width", edge['sharedPeople'].length);
-      console.log();
   }
 }
 function clipHeight(heightLoc, proposedHeight) {
@@ -232,10 +237,8 @@ function createEdgesBetweenPlaces() {
 
 function getEndeavourCounts(peopleList) {
   var counts = {culture:0, economy:0, philosophy:0, politics:0, military:0, religion:0};
-  console.log("peopleList: "+ peopleList);
   for (var i=0; i<peopleList.length; i++) {
     var person = peopledata[peopleList[i]];
-    console.log("person: " + person + " peopleList[i]: " + peopleList[i]);
     counts['culture'] += parseInt(person['culture']);
     counts['economy'] += parseInt(person['economy']);
     counts['philosophy'] += parseInt(person['philosophy']);
@@ -260,7 +263,6 @@ function arraysIntersect(arrayOne, arrayTwo) {
 }
 
 function populatePolisResidents() {
-    console.log("In polis residents: " + peopledata.length);
     for(var i = 0; i < peopledata.length; i++) {
         var currentPerson = peopledata[i];
         var birthplace = currentPerson['Birthplace_Code'];
