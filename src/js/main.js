@@ -10,6 +10,11 @@ var width = 650,
 
 var greatestPolisNumber = 1035;
 
+var excludedCities = ["Lipara", "Mylai", "Ledon", "Lokroi"];
+
+// This allows us to reset the highlighting properly
+var lastHighlighted = [];
+
 var peopledata,
     placesdata;
 
@@ -29,7 +34,7 @@ function initialize() {
     populatePolisResidents();
     createEdgesBetweenPlaces();
     nodes = placesdata.filter(function(d) {
-        return d['edges'] != null;
+          return d['edges'] != null;
         });
     var graph = drawGraph("#overview", "overview-svg", nodes, edgeArray);
     graph['nodes']
@@ -43,18 +48,24 @@ function initialize() {
           });
     graph['edges'].style("stroke-width", function(d) { 
             return d['sharedPeople'].length;
-        }).style("stroke", function(d) {
+        })
+        .style("stroke", function(d) {
             return getColorForEndeavor(getMostRepEndeavor(d.counts));                     
+        })
+        .attr("id", function(d) {
+            return "n"+d['source']['polis_number'] + "-" + d['target']['polis_number'];
         });
 }
 
 function getMostRepEndeavor(counts) {
     var endeavor = "";
     var maxCount = 0;
-    for (var endeavorKey in counts) {
-        if(counts[endeavorKey] > maxCount) {
-           endeavor = endeavorKey;
-           maxCount = counts[endeavorKey];
+    // We do this manually to ensure that ties are broken in the same order
+    var keys = ['culture', 'philosophy', 'economy', 'politics', 'military', 'religion'];
+    for (var endeavorKey in keys) {
+        if(counts[keys[endeavorKey]] > maxCount) {
+           endeavor = keys[endeavorKey];
+           maxCount = counts[keys[endeavorKey]];
         }
     }
     return endeavor;
@@ -63,7 +74,7 @@ function getMostRepEndeavor(counts) {
 function getColorForEndeavor(endeavor) {
     switch(endeavor) {
         case "culture":
-            return "#E4IAIC";
+            return "#E41A1C";
         case "philosophy":
             return "#377EB8";
         case "economy":
@@ -80,7 +91,7 @@ function getColorForEndeavor(endeavor) {
 }
 
 function mouseEnteredNode(currentPlace) {
-  d3.selectAll(".tooltip").remove();
+  d3.selectAll(".tooltip").remove(); 
   var boxWidth = 140,
       boxHeight = 40
       offset = 0;
@@ -96,7 +107,11 @@ function mouseEnteredNode(currentPlace) {
       .attr("height", boxHeight)
       .attr("class", "tooltip")
       .attr("fill", "#CECFDE")
-      .on("mouseout", function() { d3.selectAll(".tooltip").remove(); })
+      .attr("opacity", .6)
+      .on("mouseout", function() { 
+          d3.selectAll(".tooltip").remove(); 
+          resetEdgeProperties(currentPlace['edges']);
+       })
       .on("mouseclick", drawIndividualGraphAsCirclePack(currentPlace)); 
   d3.select("#overview svg")
       .append("text")
@@ -106,9 +121,36 @@ function mouseEnteredNode(currentPlace) {
       .attr("x", boxX + boxWidth/2)
       .attr("y", boxY + boxHeight/2)
       .attr("fill", "white")
+      .attr("stroke", "black")
+      .attr("font-size", 18)
       .text(currentPlace['Toponym']);
+  
+  highlightEdges(currentPlace['edges'], 10, "red");
 }
 
+function highlightEdges(edges, width, color) {
+  for (var i=0; i < edges.length; i++) {
+      var edge = edgeArray[edges[i]];
+      var edgeId = "#n" + edge['source']['polis_number'] + "-" + edge['target']['polis_number']; 
+      console.log(edgeId + " - " + edge['counts']);
+      d3.selectAll("#overview svg " + edgeId)
+          .style("stroke", color)
+          .style("stroke-width", width);
+  }
+  lastHighlighted = edges;
+}
+
+function resetEdgeProperties(edges) {
+  for (var i=0; i < edges.length; i++) {
+      var edge = edgeArray[edges[i]];
+      var edgeId = "#n" + edge['source']['polis_number'] + "-" + edge['target']['polis_number']; 
+      //console.log(edgeId + " - " + edge['counts']);
+      d3.selectAll("#overview svg " + edgeId)
+          .style("stroke", getColorForEndeavor(getMostRepEndeavor(edge['counts'])))
+          .style("stroke-width", edge['sharedPeople'].length);
+      console.log();
+  }
+}
 function clipHeight(heightLoc, proposedHeight) {
     if (heightLoc < 0) { 
         return 0;
@@ -130,7 +172,10 @@ function clipWidth(widthLoc, proposedWidth) {
 function createEdgesBetweenPlaces() {
     for(var firstPolisNumber = 0; firstPolisNumber < placesdata.length; firstPolisNumber++) {
         for(var secondPolisNumber = 0; secondPolisNumber < placesdata.length; secondPolisNumber++) {
-            if(firstPolisNumber != secondPolisNumber) {
+            // We also check to ensure that we are not making an edge between one of the cities
+            // we are excluding
+            if(firstPolisNumber != secondPolisNumber && 
+                excludedCities.indexOf(placesdata[firstPolisNumber]['Toponym']) == -1) {
                 var intersection = arraysIntersect(placesdata[firstPolisNumber]['people'], 
                         placesdata[secondPolisNumber]['people']);
                 if (intersection.length != 0) {
@@ -277,12 +322,27 @@ function drawIndividualGraphAsCirclePack(currentPlace) {
       .attr("fill", "white")
       .attr("font-size", "12px")
       .text(function(d) { return d['Toponym']; });
-
-  var svg = d3.select("#individual svg")
+  
+  
+  var boxWidth = width,
+      boxHeight = 40,
+      boxX = 0, 
+      boxY = height - boxHeight;
+  d3.select("#individual svg")
+      .append("rect")
+      .attr("x", boxX)
+      .attr("y", boxY)
+      .attr("width", boxWidth)
+      .attr("height", boxHeight)
+      .attr("fill", "#CECFDE")
+      .attr("opacity", .5);
+  d3.select("#individual svg")
       .append("text")
       .attr("class", "individual_desc")
-      .attr("dx", "8")
-      .attr("dy", "12")
+      .attr("x", boxX + boxWidth/16)
+      .attr("y", boxY + boxHeight/2)
+      .attr("stroke-width", 1)
+      .attr("font-size", "24")
       .text("View of the world from the perspective of " + currentPlace['Toponym'] +".");
 }
 
@@ -295,8 +355,8 @@ function drawGraph(divToAddTo, graphClass, nodes, edges) {
         .attr("class", graphClass);
 
     var force = d3.layout.force()
-        .charge(-200)
-        .linkDistance(150)
+        .charge(-300)
+        .linkDistance(70)
         .size([width, height]);
 
     force
