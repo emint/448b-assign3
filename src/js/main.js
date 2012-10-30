@@ -92,6 +92,8 @@ function getColorForEndeavor(endeavor) {
 
 function mouseEnteredNode(currentPlace) {
   d3.selectAll(".tooltip").remove(); 
+  resetEdgeProperties(lastHighlighted);
+
   var boxWidth = 140,
       boxHeight = 40
       offset = 0;
