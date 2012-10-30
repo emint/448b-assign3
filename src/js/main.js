@@ -1,13 +1,13 @@
 
 var PEOPLE_PATH = "../../data/people_full.csv";
-var PLACES_PATH = "../../data/greek_cities.csv";
+var PLACES_PATH = "../../data/polis_data.csv";
 
 var filesToLoad = 2;
 
 var width = 550,
     height = 550;
 
-var greatestPolisNumber = 400;
+var greatestPolisNumber = 1035;
 
 var peopledata,
     placesdata;
