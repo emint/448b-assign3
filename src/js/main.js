@@ -294,25 +294,6 @@ function addPersonToPlace(personIndex, placeCode) {
     }
 }
 
-function drawIndividualGraph(currentPlace) {
-    var currentPlaceEdges = currentPlace['edges'];
-    if (currentPlaceEdges == null) return;
-    
-    //Remove previous graph if it exists 
-    d3.selectAll(".ind-svg").remove();    
-
-    var neighbors = [currentPlace];
-    var individualEdgeArray = [];
-    for(var i = 0; i < currentPlaceEdges.length; i++) {
-        var target = edgeArray[currentPlaceEdges[i]].target;
-        var targetIndex = target['polis_number'] - 1;
-        neighbors.push(placesdata[targetIndex]);
-        individualEdgeArray.push({source: currentPlace, target: placesdata[targetIndex]});
-    }
-
-    drawGraph("#individual", "ind-svg", neighbors, individualEdgeArray);
-}
-
 function createControlPanel() {
     var checkboxesForm = d3.select("#control").append("form");
    
@@ -343,7 +324,8 @@ function drawIndividualGraphAsCirclePack(currentPlace) {
       var target = edge.target;
       var targetIndex = target['polis_number'] - 1;
       neighbors.push({Toponym: placesdata[targetIndex]['Toponym'], 
-          value:edge['sharedPeople'].length, mostSharedEndev:getMostRepEndeavor(edge['counts'])});
+          value:edge['sharedPeople'].length, mostSharedEndev:getMostRepEndeavor(edge['counts']),
+          allCounts:edge['counts']});
   }
 
   var fill = d3.scale.category20c();
@@ -378,8 +360,14 @@ function drawIndividualGraphAsCirclePack(currentPlace) {
       .attr("text-anchor", "middle")
       .attr("dy", ".3em")
       .attr("fill", "white")
-      .attr("font-size", "12px")
-      .text(function(d) { return d['Toponym']; });
+      .attr("font-size", "10px")
+      .text(function(d) {
+          var sum = 0;
+          for (var key in d['allCounts']) {
+              sum += d['allCounts'][key];
+          } 
+          return d['Toponym'] + "(" + sum + ")"; 
+      });
   
   
   var boxWidth = width,
