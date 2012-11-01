@@ -301,6 +301,7 @@ function createControlPanel() {
         .data(endeavors).enter()
         .append("label")
         .text(function(d) {return d;})
+        .style("color", function(d) { return getColorForEndeavor(d); }) 
         .append("input")
         .attr("class", "checkboxControl")
         .attr("type", "checkbox")
